@@ -1,33 +1,13 @@
+const http = require('http');
+const request = require('request');
 
+function initApp(clientSecretKey , params) {
+  if (!clientSecretKey) {
+    throw new Error('Providing Client Secret Key is Mandatory!!!');
+  }
 
-function xx() {
-  return new Promise((resolve , reject) => {
-    reject('vivek!!');
-  });
+this.clientSecretKey = clientSecretKey;
+this.httpHost        = 'api.hackerearth.com'
+this.httpUri         = 'https://' + this.httpHost;
+this.possibleLangs   = ['C', 'CPP', 'CPP11', 'CLOJURE', 'CSHARP', 'JAVA', 'JAVASCRIPT', 'HASKELL', 'PERL', 'PHP', 'PYTHON', 'RUBY'];
 }
-
-function yy() {
-
-// xx().then((res) => {
-//   return new Promise((resolve , reject) => {
-//     resolve(res);
-//   })
-// });
-
-return new Promise((resolve , reject) => {
-  xx().then((res) => {
-    resolve('vivek!!!!');
-  })
-  .catch((res) => {
-    console.log(res);
-  })
-})
-}
-
-
-yy().then((res)=> {
-  console.log(res);
-})
-.catch((res) => {
-  console.log(res);
-})
