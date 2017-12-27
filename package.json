@@ -9,6 +9,7 @@
   "author": "Vivek",
   "license": "ISC",
   "dependencies": {
+    "clone": "^2.1.1",
     "request": "^2.83.0"
   }
 }
